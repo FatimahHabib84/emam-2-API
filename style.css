@@ -1,0 +1,90 @@
+:root{
+    --blueVilotwPrimaryColor: blueviolet;
+    --primaryColorHover:rgba(137, 43, 226, 0.329);
+    --whitesmokeSecondryColor: whitesmoke;
+    --whiteThirdColor: white;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: var(--whitesmokeSecondryColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    height: 100vh;
+}
+
+/* nav bar */
+.navContainer{
+    /* position: fixed; */
+    background-color: var(--blueVilotwPrimaryColor);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+    box-shadow: 3px 3px 10px black;
+}
+.navItems{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.item, .item>a{
+    color: var(--whiteThirdColor);
+    text-decoration: none;
+    list-style: none;
+    font-size: large;
+    font-weight: 500;
+    display: inline;
+    cursor: pointer;
+}
+.item:hover, .item>a:hover{
+    color: var(--whiteThirdColor);
+}
+#helloUserMessage{
+    cursor:default !important;
+}
+
+/* form */
+.form{
+    display: grid;
+}
+.form>*{
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+}
+.noteWord{
+    color: red;
+    font-weight: 600;
+}
+
+.bodyContainer>p{
+    margin: 1rem;
+    font-weight: 600;
+    font-size: 1.5em;
+    color: var(--blueVilotwPrimaryColor);
+    text-align: center;
+}
+
+/* mobile */
+@media only screen and (max-width:600px) {
+    .navContainer{
+        position: fixed;
+        bottom: 0;
+    }
+}
+
+/* laptop */
+@media only screen and (min-width:601px) {
+    .navContainer{
+        position: fixed;
+        top: 0;
+    }
+}
